@@ -3,107 +3,108 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-
+        * {
+            margin: 0px;
         }
 
         .container {
-            width: 200px;
-            height: 200px;
+
             border: 2px solid black;
-            /* animation-duration: 4s; */
-            /* animation-name: box; */
-            /* animation-iteration-count: 4; */
-            /* animation-timing-function: ease-in-out; */
-            /* position: relative; */
-            /* transition-property: background-color,width,border-radius; */
-
-            /* animation-duration: 5s; */
-            transition: all 2s ease-in;
+            height: 100vh;
         }
 
-        /* @keyframes box{
-             from{
-                width: 0px;
-                /* height: 0px; */
-        /* left: 0px;
-                background-color: red; */
-        /* background-color: yellow; */
+        .header {
 
-
-
-        /* to{ */
-        /* width: 1200px; */
-        /* height: 800px; */
-        /* left: 200px; */
-        /* background-color: red; */
-
-
-        /* 0%{
-            left: 0px;
-            top: 0px;
+            border: 2px solid black;
+            height: 10%;
+            font-size: 50px;
+            text-align: center;
             background-color: yellow;
-            border-radius: 10px;
+        }
 
+        .navigation {
 
-
+            border: 2px solid black;
+            height: 10%;
+            background-color: green;
+            font-size: 50px;
+            text-align: center;
 
         }
-        25%{
-            left: 700px;
-            top: 0px;
-            background-color: pink;
-            border-radius: 20px;
 
 
+        .main {
 
-        }
-        50%{ */
-        /* top: 500px;
-            left: 500px;
-            background-color: black;
-            border-radius: 30px;
-
-
-
-        }
-        75%{
-            top: 500px;
-            left: 0px;
+            height: 70%;
+            border: 2px solid black;
             background-color: blue;
-            border-radius: 45px; */
+            display: flex;
+        }
 
+        .footer {
 
+            height: 10%;
+            border: 2px solid black;
+            background-color:red;
+            font-size: 50px;
+            text-align: center;
+        }
 
+        .inner {
 
-        /* }
-        100%{
-            left: 0px;
-            top: 0px;
-            background-color: red;
-            border-radius: 50px;
+            height: 95%;
+            border: 2px solid black;
+            background-color: greenyellow;
+            margin: 10px;
+        }
 
-        } */
+        .left {
 
-        .container:hover {
-            height: 400px;
-            width: 400px;
-            border-radius: 100px;
-            background-color: yellow;
+            width: 30%;
+        }
 
+        .right {
+
+            width: 68%;
+        }
+
+        .inner-right {
+
+            height: 45%;
+            width: 95%;
+            border: 2px solid black;
+            background-color: skyblue;
+            margin: 15px 30px;
         }
     </style>
 </head>
 
 <body>
-    <div class="container"></div>
+
+    <div class="container">
+
+        <div class="header">
+            Header
+        </div>
+
+        <div class="navigation">
+            Navigation
+        </div>
+        <div class="main">
+            <div class="inner left"></div>
+            <div class="inner right">
+                <div class="inner-right"></div>
+                <div class="inner-right"></div>
+            </div>
+        </div>
+        <div class="footer">
+            footer
+        </div>
+
+    </div>
 
 </body>
 
