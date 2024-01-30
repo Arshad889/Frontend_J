@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+        .colors{
+            display: flex;
+            margin-top: 10px;
+            /* display: block; */
+
+        }
+        .yellow{
+            height: 25px;
+            width: 25px;
+            border-radius: 25px;
+            margin: 5px;
+            border: 2px solid yellow;
+            padding: 4px;
+            background-color: yellow;
+        }
+        .red{
+            height: 25px;
+            width: 25px;
+            border-radius: 25px;
+            margin: 5px;
+            border: 2px solid red;
+            padding: 4px;
+            background-color: red;
+        }
+        .blue{
+            height: 25px;
+            width: 25px;
+            border-radius: 25px;
+            margin: 5px;
+            border: 2px solid blue;
+            padding: 4px;
+            background-color: blue;
+        }
+        .orange{
+            height: 25px;
+            width: 25px;
+            border-radius: 25px;
+            margin: 5px;
+            border: 2px solid orange;
+            padding: 4px;
+            background-color: orange;
+        }
+        .black{
+            height: 25px;
+            width: 25px;
+            border-radius: 25px;
+            margin: 5px;
+            border: 2px solid black;
+            padding: 4px;
+            background-color: black;
+        }
+        .btn1{
+            background-color: rgb(55, 137, 55);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 15px;
+            
+            
+        }
+        .sel{
+            width: 300px;
+            height: 35px;
+            border-radius: 10px;
+        }
+        
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+
+        }
+    
+        
+        .container{
+            
+            width:50%;
+            border: 2px solid black;
+            border-radius: 25px;
+            padding: 20px;
+            background-color: #eee7e7;
+
+
+
+        }
+        .color{
+            display: flex;
+       flex-wrap: wrap;
+        }
+        
+</style>
+</head>
+<body id="cont">
+    
+
+       
+         
+         
+    <div class="container"> 
+        <h1>select your domain</h1>
+      <select name="" id="select">
+        <option value="">Make your choice</option>
+        <option value="react">React</option>
+        <option value="django">Django</option>
+        <option value="Anguler">Angular</option>
+        <option value="AWS">AWS</option>
+      </select>
+
+      <div class="color">
+        <div class="yellow" id="yellow"></div>
+        <div class="red" id="red"></div>
+        <div class="blue" id="blue"></div>
+        <div class="orange" id="orange"></div>
+        <div class="black" id="black"></div>
+        <p id="h"></p>
+    </div>
+    
+    
+    <button class="btn1" id="upper">uppercase</button>
+    <button class="btn1"id="lower">lowercase</button>
+    <button class="btn1"id="plus">+</button>
+    <button class="btn1"id="minus">-</button>
+    <select class="btn1" id="fon">
+        <option id="" value="none">None</option>
+        <option value="sans-serif">sans serif</option>
+        <option value="serif">serif</option>
+        <option value="SMonospace">SMonospace</option>
+        <option value="cursive">cursive</option>
+
+    </select>
+   
+</div>
+
+<script>
+        
+        document.getElementById("select").onclick = function (){
+            let a = document.getElementById("select").value;
+            if(a =="react"){
+                document.getElementById("h").innerText = "React is a free and open-source front-end JavaScript library for building user interfaces based on components. It is maintained by Meta and a community of individual developers and companies. React can be used to develop single-page, mobile, or server-rendered applications with frameworks like Next.js. Wikiped"
+            }
+            else if(a == "django"){
+                document.getElementById("h").innerText = "Django is a free and open-source, Python-based web framework that runs on a web server. It follows the model–template–views architectural pattern. It is maintained by the Django Software Foundation, an independent organization established in the US as a 501 non-profit. Wikipedia"
+
+            }
+            else if(a == "Anguler"){
+                document.getElementById("h").innerText = "Angular is a TypeScript-based, free and open-source single-page web application framework led by the Angular Team at Google and by a community of individuals and corporations. Angular is a complete rewrite from the same team that built AngularJS. Wikipedia"
+
+            }
+            else if(a == "AWS"){
+                document.getElementById("h").innerText = "Amazon Web Services, Inc. is a subsidiary of Amazon that provides on-demand cloud computing platforms and APIs to individuals, companies, and governments, on a metered, pay-as-you-go basis. Clients will often use this in combination with autoscaling. Wikipedia"
+
+            }
+            else{
+                document.getElementById("h").innerHTML ="";
+            }
+        }
+        document.getElementById("upper").onclick = function (){
+            document.getElementById("h").style.textTransform = "uppercase";
+        };
+        document.getElementById("lower").onclick = function (){
+            document.getElementById("h").style.textTransform = "lowercase";
+        };
+        let counter = 16;
+        document.getElementById("plus").onclick = function (){
+            counter++;
+            console.log(counter);
+            document.getElementById("h").style.fontSize = counter + "px";
+
+        };
+        document.getElementById("minus").onclick = function (){
+            counter--;
+            console.log(counter);
+            document.getElementById("h").style.fontsize = counter + "px";
+        };
+
+        document.getElementById("yellow").onclick = function (){
+            document.getElementById("cont").style.backgroundColor = "yellow";
+        };
+        
+        document.getElementById("red").onclick = function (){
+            document.getElementById("cont").style.backgroundColor = "red";
+        };
+
+        document.getElementById("blue").onclick = function (){
+            document.getElementById("cont").style.backgroundColor = "blue";
+        };
+        document.getElementById("orange").onclick = function (){
+            document.getElementById("cont").style.backgroundColor = "orange";
+        };
+        document.getElementById("black").onclick = function (){
+            document.getElementById("cont").style.backgroundColor = "black";
+        };
+
+        document.getElementById("fon").onclick = function (){
+            
+            let p = document.getElementById("fon").value;
+
+            if(p=="sans-serif"){
+                document.getElementById("h").style.fontFamily = "sans-serif";
+            
+        }
+        else if(p == "serif"){
+            document.getElementById("h").style.fontFamily = "serif";
+        }
+        else if(p == "SMonospace"){
+            document.getElementById("h").style.fontFamily = "SMonospace";
+        }
+        else if(p == "cursive"){
+            document.getElementById("h").style.fontFamily = "cursive";
+        }
+        else if(p == "None"){
+            document.getElementById("h").style.fontFamily = "";
+        }
+
+        };
+
+        
+    </script>
+        
+    
+</body>
+</html>
