@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <input type="text" name="" id="">
+    <button id="button">submit</button>
+    <script>
+        
+        let primenotprime = (x)=>{
+            for (let i = 2 ; i<x ; i++){
+                if(x%i==0){
+                    return 0;
+                }
+            }
+            return 1;
+        };
+        // let ans = primenotprime(6);
+        // if (ans = 0) {
+            // console.log("not prime number");
+
+        // }else{
+            // console.log("prime number");
+        // }
+        document.getElementById("button").onclick=function (){
+            let ans = primenotprime (6);
+            if (ans == 0) {
+            console.log("not prime number");
+
+        }
+        else{
+            console.log("prime number");
+        }
+            
+
+        };
+
+        
+    </script>
+</body>
+</html>
